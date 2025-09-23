@@ -115,3 +115,22 @@ body {
     border-radius: 1rem;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
+
+
+@media (max-width: 480px) {
+    .middlel-section h1 {
+        font-size: 2rem;
+    }
+    .middlel-section h3 {
+        font-size: 1.2rem;
+    }
+    .head-section input, .head-section button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    .bottom-section p {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+    }
+}
