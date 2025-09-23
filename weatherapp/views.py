@@ -1,12 +1,13 @@
 import requests
 from django.shortcuts import render
 from . forms import CityForm
+from django.conf import settings
 
 # Create your views here.
 def index(request):
     weather_data = None
     default_city = "Delhi"
-    api_key = 'a09cb56c1721ef2dc7e9ae11ffee0191'
+    api_key = settings.OPENWEATHER_API_KEY
 
     if request.method == 'POST':
         form = CityForm(request.POST)
@@ -19,7 +20,6 @@ def index(request):
         form = CityForm()
         city = default_city
 
-    api_key = 'a09cb56c1721ef2dc7e9ae11ffee0191'
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     response = requests.get(url).json()
 

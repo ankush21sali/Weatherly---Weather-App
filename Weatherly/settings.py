@@ -134,4 +134,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # environment variable for OpenWeather API
-OPENWEATHER_API_KEY = os.getenv('OPENWEATHER_API_KEY', 'a09cb56c1721ef2dc7e9ae11ffee0191')
+OPENWEATHER_API_KEY = os.getenv('OPENWEATHER_API_KEY')
